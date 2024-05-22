@@ -8,6 +8,7 @@ module.exports = {
       fontFamily:{
        Comfortaa:  ["Comfortaa", "sans-serif"],
        Edu : ["Edu VIC WA NT Beginner", "cursive"],
+       Freeman: ["Freeman", "sans-serif"]
       }
     },
   },
