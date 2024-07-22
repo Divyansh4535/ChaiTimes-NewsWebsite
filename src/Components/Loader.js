@@ -1,93 +1,43 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-
+import "./Loader.css"
 const Loader =()=>{
     return (
       <>
-        <div
-          aria-label="Loading..."
-          role="status"
-          className="flex items-center justify-center h-screen left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 w-full space-x-2"
-        >
-          <svg
-            className="h-16 w-16 animate-spin stroke-gray-500"
-            viewBox="0 0 256 256"
-          >
-            <line
-              x1="128"
-              y1="32"
-              x2="128"
-              y2="64"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-            ></line>
-            <line
-              x1="195.9"
-              y1="60.1"
-              x2="173.3"
-              y2="82.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-            ></line>
-            <line
-              x1="224"
-              y1="128"
-              x2="192"
-              y2="128"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-            ></line>
-            <line
-              x1="195.9"
-              y1="195.9"
-              x2="173.3"
-              y2="173.3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-            ></line>
-            <line
-              x1="128"
-              y1="224"
-              x2="128"
-              y2="192"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-            ></line>
-            <line
-              x1="60.1"
-              y1="195.9"
-              x2="82.7"
-              y2="173.3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-            ></line>
-            <line
-              x1="32"
-              y1="128"
-              x2="64"
-              y2="128"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-            ></line>
-            <line
-              x1="60.1"
-              y1="60.1"
-              x2="82.7"
-              y2="82.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-            ></line>
-          </svg>
-          <span className="text-3xl font-medium text-gray-500">Loading...</span>
-        </div>
+
+<div className="h-screen w-full flex items-center justify-center ">
+<div className="loader">
+  <div className="loaderMiniContainer">
+    <div className="barContainer">
+      <span className="bar"></span>
+      <span className="bar bar2"></span>
+    </div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 101 114"
+      className="svgIcon"
+    >
+      <circle
+        strokeWidth="7"
+        stroke="black"
+        transform="rotate(36.0692 46.1726 46.1727)"
+        r="29.5497"
+        cy="46.1727"
+        cx="46.1726"
+      ></circle>
+      <line
+        strokeWidth="7"
+        stroke="black"
+        y2="111.784"
+        x2="97.7088"
+        y1="67.7837"
+        x1="61.7089"
+      ></line>
+    </svg>
+  </div>
+</div>
+</div>
       </>
     );
   }

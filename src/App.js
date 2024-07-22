@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { BrowserRouter as Link, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import News from "./Components/News";
-import LoadingBar from 'react-top-loading-bar'
-import Home from "./Components/Home";
+import LoadingBar from "react-top-loading-bar";
 
 const App = () => {
-  const [progress, setProgress] = useState(0)
+  const [progress, setProgress] = useState(0);
   // apiKey = process.env.REACT_API_KEY
-  let apiKey = '65ccb928a6d54072b14c236b6fe20754'
+  let apiKey = "65ccb928a6d54072b14c236b6fe20754";
 
   let category = [
     { title: "Business", path: "business" },
@@ -20,11 +19,14 @@ const App = () => {
     { title: "Technology", path: "technology" },
   ];
   return (
-    <div className="font-Comfortaa" 
-    style={{ backgroundImage: 'url("https://as1.ftcdn.net/v2/jpg/02/23/38/64/1000_F_223386472_g3ZlTnCCTRD9jtcvXML9F3HUNu91UAa0.jpg")' ,backgroundSize:"cover", overflow:"hidden" }}
+    <div
+      className="font-Comfortaa  bg-gray-300 h-fit  w-full"
+      // style={{
+      //   backgroundSize: "cover",
+      //   overflow: "hidden",
+      // }}
     >
       <NavBar />
-      {/* <Home/> */}
       <LoadingBar
         color='#f11946'
         progress={progress}
@@ -32,7 +34,7 @@ const App = () => {
       <Routes>
         <Route
           path="/"
-          element={<News apikey={apiKey} pageSize={6} country="in" category="general" />}
+          element={<News  setProgress={setProgress}  apikey={apiKey} pageSize={6} country="in" category="general" />}
         />
         {category.map((elem, index) => {
           return (
@@ -49,6 +51,6 @@ const App = () => {
       </Routes>
     </div>
   );
-}
+};
 
-export default App
+export default App;
